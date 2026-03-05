@@ -1,0 +1,128 @@
+.app-shell {
+  width: min(1040px, 92vw);
+  margin: 2.5rem auto;
+  padding: 2rem;
+  border-radius: 24px;
+  background: linear-gradient(160deg, #fff8e8 0%, #ffeec8 40%, #f6d7a7 100%);
+  box-shadow: 0 20px 55px rgba(47, 25, 3, 0.15);
+}
+
+.hero {
+  margin-bottom: 1.4rem;
+}
+
+.kicker {
+  display: inline-block;
+  margin: 0;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  background: #ffe1a3;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0.6rem 0;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: #512600;
+}
+
+.subtitle {
+  margin: 0;
+  color: #714420;
+}
+
+.search-panel {
+  margin-top: 1.4rem;
+}
+
+.search-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: #5e330f;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.85rem 0.95rem;
+  border-radius: 12px;
+  border: 1px solid #cf9869;
+  background: #fff9ee;
+  color: #341800;
+  font-size: 1rem;
+}
+
+.search-input:focus {
+  outline: 3px solid #ffce86;
+  border-color: #b66e30;
+}
+
+.status {
+  margin: 1rem 0;
+  font-weight: 600;
+}
+
+.status.loading {
+  color: #7c4b18;
+}
+
+.status.error {
+  color: #942b12;
+}
+
+.status.success {
+  color: #275832;
+}
+
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.pokemon-card {
+  padding: 1rem;
+  border-radius: 14px;
+  background: #fffefb;
+  border: 1px solid #efc899;
+  text-align: center;
+}
+
+.pokemon-image {
+  width: 112px;
+  height: 112px;
+  object-fit: contain;
+}
+
+.pokemon-card h3 {
+  margin: 0.6rem 0 0.3rem;
+  text-transform: capitalize;
+  color: #3e2006;
+}
+
+.pokemon-card p {
+  margin: 0.25rem 0;
+  color: #6b3f1a;
+}
+
+.pokemon-types {
+  text-transform: capitalize;
+  font-size: 0.95rem;
+}
+
+.empty-state {
+  padding: 1.4rem;
+  border: 1px dashed #c58f58;
+  border-radius: 12px;
+  color: #714420;
+}
+
+@media (max-width: 640px) {
+  .app-shell {
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+}
