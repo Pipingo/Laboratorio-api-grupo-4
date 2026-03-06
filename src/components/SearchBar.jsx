@@ -4,11 +4,21 @@ function SearchBar({ value, onChange }) {
     onChange('')
   }
 
+  function handleChange(event) {
+    onChange(event.target.value.trimStart())
+  }
+
+  function handleKeyDown(event) {
+    if (event.key === "Escape") {
+      clearSearch()
+    }
+  }
+
   return (
     <section className="search-panel">
 
       <label htmlFor="pokemon-search" className="search-label">
-        Buscar Pokemon
+        Buscar Pokémon
       </label>
 
       <input
@@ -16,13 +26,18 @@ function SearchBar({ value, onChange }) {
         className="search-input"
         type="text"
         value={value}
-        onChange={(event) => onChange(event.target.value)}
+        onChange={handleChange}
+        onKeyDown={handleKeyDown}
         placeholder="Ejemplo: pikachu"
         autoComplete="off"
       />
 
       {value && (
-        <button onClick={clearSearch}>
+        <button
+          type="button"
+          className="search-clear-btn"
+          onClick={clearSearch}
+        >
           Limpiar
         </button>
       )}
