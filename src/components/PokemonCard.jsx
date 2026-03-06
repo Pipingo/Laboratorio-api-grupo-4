@@ -23,19 +23,25 @@ function PokemonCard({ pokemon }) {
         className="pokemon-image"
       />
 
-      <h3>{pokemon.name}</h3>
+      <h3>
+        {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
+      </h3>
 
-      <p>#{String(pokemon.id).padStart(3, '0')}</p>
+      <p>#{String(pokemon.id).padStart(3, "0")}</p>
 
-      <p className="pokemon-types">
-        {pokemon.types.join(' / ')}
-      </p>
+      <div className="pokemon-types">
+        {pokemon.types.map((type, index) => (
+          <span key={index} className="type-badge">
+            {type}
+          </span>
+        ))}
+      </div>
 
       <p>Altura: {pokemon.height}</p>
 
       <p>Peso: {pokemon.weight}</p>
     </article>
-  )
+  );
 }
 
-export default PokemonCard
+export default PokemonCard;
